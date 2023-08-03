@@ -71,16 +71,15 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 * * *
 <h2> 슈퍼셀 하이퍼 케쥬얼 게임잼</h2>
 제가 맡은 부분은 
-Player 조작
-Item,
-Effect
-Sound,
-Player와 관련된 UI
-배경 효과 및 설정
-이었습니다.
+Player 조작, </br>
+Item, </br>
+Effect, </br>
+Sound, </br>
+Player와 관련된 UI </br>
+배경 효과 및 설정 이었습니다. </br>
 
-제가 개발한 코드들만 보실 수 있습니다.
-[Anger of Whale 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/AngerOfWhale)
+제가 개발한 코드들만 보실 수 있습니다. </br>
+[Anger of Whale 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/AngerOfWhale) </br>
 [게임 플레이하기 ](https://shinee0382.itch.io/butty-butty)
 
 
