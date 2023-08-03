@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:ProjectP/Assets/Scripts/BattleHUD.cs.meta
+guid: 14de1255da259044ab7a44ee2c1e4848
+========
+guid: 7d53d0ca523678743b127065f981abb6
+>>>>>>>> feature/ability:ProjectP/Assets/Scripts/Model/PlayerStatus.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
