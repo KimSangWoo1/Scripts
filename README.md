@@ -49,7 +49,8 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 <h3>3. Decal Shader </h3>
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223170324873)
-[ToonShader Code 및 블로그 정리 글](https://blog.naver.com/tkdqjadn/222961976090)
+
+그 외 [ToonShader Code 및 블로그 정리 글](https://blog.naver.com/tkdqjadn/222961976090)
 
 * * *
 <h2> xxxxxProject </h2>
