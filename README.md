@@ -103,19 +103,19 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 
 <h3> Talk System </h3>
 
-[DragonStory 연출 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Talk) </br>
+[DragonStory Talk System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Talk) </br>
 
 [![Video Label](http://img.youtube.com/vi/5WbHuWxsRuo/0.jpg)](https://www.youtube.com/5WbHuWxsRuo)
 
 <h3> Dialog System </h3>
 
-[DragonStory 연출 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Dialog) </br>
+[DragonStory Dialog System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Dialog) </br>
 
 [![Video Label](http://img.youtube.com/vi/mnS3If7S_W0/0.jpg)](https://www.youtube.com/mnS3If7S_W0)
 
 <h3> Quest System </h3>
 
-[DragonStory 연출 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Quest) </br>
+[DragonStory Quest System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Quest) </br>
 
 [![Video Label](http://img.youtube.com/vi/aHTmvMXNaJA/0.jpg)](https://www.youtube.com/aHTmvMXNaJA)
 
