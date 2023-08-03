@@ -34,7 +34,7 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
  3D기반 로그라이크 + 캐쥬얼 + 슈팅게임을 개발중에 있습니다.  <br/>
  개발 초기 단계라 부수적인 시스템을 먼저 개발하고 있었습니다.   <br/>
  그중 소개할 것은 3가지  <br/>
-<h3>1. Enemy Spawner Point Tool </h3>
+<h3>1. Deploy Point Tool (Enemy Spawner)</h3>
 
 [NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/Deploy%20Point)
 
