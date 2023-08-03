@@ -9,7 +9,8 @@
 80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다. 
 
 <h3>Ability Data 구조</h3>
-[데이터 코드] (https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
+
+[데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
 데이터 클래스
 
@@ -22,5 +23,5 @@ Player 능력을 강화 시켜주는 시스템입니다.
 2. Ability 카드 선택 -> Event -> 버프Dictionry 저장 -> 해당 버프 조건 Event -> 버프 발동 및 해제
 
 자세한 내용의 코드는 아래에서 확인하실 수 있습니다.
-[Ability 코드 보기] (https://github.com/KimSangWoo1/Scripts/tree/main/Ability/System)
-[Event 코드 보기] (https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Event)
+[Ability 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/System)
+[Event 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Event)
