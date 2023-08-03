@@ -80,12 +80,12 @@ Player와 관련된 UI
 이었습니다.
 
 제가 개발한 코드들만 보실 수 있습니다.
-[Anger of Whale 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/Deploy%20Point)
+[Anger of Whale 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/AngerOfWhale)
 [게임 플레이하기 ](https://shinee0382.itch.io/butty-butty)
 
 
 * * *
-<h2> 슈퍼셀 하이퍼 케쥬얼 게임잼</h2>
+<h2> DragonStory </h2>
 
 
 
