@@ -86,5 +86,8 @@ Player와 관련된 UI </br>
 * * *
 <h2> DragonStory </h2>
 
+<h3> 스토리 연출 , 컷씬 </h3>
+DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출되는 느낌의 스토리 연출 기능을 만들어 보았다.
+
 
 
