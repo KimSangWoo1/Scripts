@@ -35,13 +35,13 @@ Player 능력을 강화 시켜주는 시스템입니다.
  그중 소개할 것은 3가지
 <h3>1. Enemy Spawner Point Tool </h3>
 
-[NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate Guardian/Enemy Spawner Point)
+[NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/Deploy%20Point)
 
 [블로그 정리 글 (영상 포함) ]([https://blog.naver.com/tkdqjadn/223149834412](https://blog.naver.com/tkdqjadn/223149820991))
 
 <h3>2. NavWayPoint Tool </h3>
 
-[NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate Guardian/NavWayPoint)
+[NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/NavWayPoint)
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223149834412)
 
