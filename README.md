@@ -10,7 +10,8 @@
 분의 구조와 기능이 완성된 코드입니다. 
 
 <h3>Ability Data 구조</h3>
+
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
 
 <h3>버프 시스템</h3>
-![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
+
