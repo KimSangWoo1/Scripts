@@ -40,13 +40,14 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223149820991)
 
-[![Video Label](https://youtu.be/jmYYkW8LOPk/0.jpg)](https://youtu.be/jmYYkW8LOPk)
+[![Video Label](https://youtu.be/vi/jmYYkW8LOPk/0.jpg)](https://youtu.be/jmYYkW8LOPk)
 <h3>2. NavWayPoint Tool </h3>
 
 [NavWayPoint 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/NavWayPoint)
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223149834412)
 
+[![Video Label](https://www.youtube.com/vi/watch?v=uNlCN2wunyc/0.jpg)](https://www.youtube.com/watch?v=uNlCN2wunyc)
 <h3>3. Decal Shader </h3>
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223170324873)
