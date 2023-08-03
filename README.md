@@ -126,6 +126,7 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 [DragonStory Inventory 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Inventory) </br>
 
 <h3> TPS Cam </h3>
+유니티에서 제공하는 시네머신 카메라를 사용하지 않고 구현한 TPS 카메라입니다.
 
 [DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/TPS) </br>
 
