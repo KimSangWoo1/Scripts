@@ -86,7 +86,7 @@ Player와 관련된 UI </br>
 * * *
 <h2> DragonStory </h2>
 
-드래곤 스토리에 관한 영상들은 유튜부를 통해 모두 보실 수 있습니다.
+드래곤 스토리에 관한 영상들은 유튜부를 통해 모두 보실 수 있습니다.</br>
 [![Video Label](http://img.youtube.com/vi/mm3fohTzxDE/0.jpg)](https://www.youtube.com/watch?v=mm3fohTzxDE&list=PL5YJPokUujK0LmcBRhScjPI-gGC4x7M7F&index=4)
 
 <h3> 스토리 연출 , 컷씬 </h3>
@@ -94,9 +94,10 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 기본 구성은 대본, 배우, 사운드, 카메라로 잡고 연출했다.</br>
 
 ![DragonStory StoryBoardManager Hieracrchy](https://github.com/KimSangWoo1/Scripts/issues/2)
+
 사용한 카메라 연출 기법 : Single Shot, Over the Shoulder Shot, Wide Shot, Dolly Shot, Insert Shot</br>
 
-[DragonStory 연출 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/AngerOfWhale) </br>
+[DragonStory 연출 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Story) </br>
 
 0-1 악몽은 TimeLine을 사용하여 연출해보았고 나머지는 StoryBoardManager 등 기능으로 연출하였다.
 
