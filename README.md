@@ -153,7 +153,7 @@ Goolge Play Store에는 현재 1인 모드만 가능한 빌드 파일입니다.
 <h3> 매칭 </h3>
 Photon Pun2를 이용한 매칭 시스템입니다.
 
-[DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/Match) </br>
+[SkyShooting 매칭 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/Match) </br>
 
 <h3> 싱글 모드  </h3>
 싱글 모드 게임 진행시 쓰는 모든 코드들입니다. 
