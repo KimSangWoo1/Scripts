@@ -29,6 +29,8 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 
 [Event 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Event)
 
+[![Video Label](http://img.youtube.com/vi/XwQMGnm2wgs/0.jpg)](https://youtu.be/XwQMGnm2wgs)
+
 * * *
  <h2> Gate Guardian Project (개발중)</h2>
  3D기반 로그라이크 + 캐쥬얼 + 슈팅게임을 개발중에 있습니다.  <br/>
