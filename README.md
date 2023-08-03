@@ -85,8 +85,10 @@ Player와 관련된 UI </br>
 
 * * *
 <h2> DragonStory </h2>
-드래곤 스토리는 ScriptableObject를 처음 사용해본 Project여서 
-ScriptableObject를 많이 사용했음을 미리 말씀드립니다.
+드래곤 스토리는 Unity Open Project1에서 ScriptableObject의 사용 방식을 보고</br>
+따라 만들어 본 Project여서 ScriptableObject를 많이 사용했음을 미리 말씀드립니다.
+
+[유니티 오픈프로젝트1 링크]([https://github.com/KimSangWoo1/JamJamJam](https://github.com/DapperDino/UOP1))
 
 드래곤 스토리에 관한 영상들은 유튜부를 통해 모두 보실 수 있습니다.</br>
 [![Video Label](http://img.youtube.com/vi/mm3fohTzxDE/0.jpg)](https://www.youtube.com/watch?v=mm3fohTzxDE&list=PL5YJPokUujK0LmcBRhScjPI-gGC4x7M7F&index=4)
@@ -149,7 +151,14 @@ Goolge Play Store에는 현재 1인 모드만 가능한 빌드 파일입니다.
 [![Video Label](http://img.youtube.com/vi/oa--9z9wPeU/0.jpg)](https://www.youtube.com/oa--9z9wPeU)
 
 <h3> 매칭 </h3>
+Photon Pun2를 이용한 매칭 시스템입니다.
 
-<h3> </h3>
+[DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/Match) </br>
 
-<h3> </h3>
+<h3> 싱글 모드  </h3>
+싱글 모드 게임 진행시 쓰는 모든 코드들입니다. 
+
+[SkyShooting Single Mode 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/SingleMode) </br>
+
+
+
