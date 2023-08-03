@@ -93,7 +93,7 @@ Player와 관련된 UI </br>
 DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출되는 느낌의 스토리 연출 기능을 만들어 보았다.</br>
 기본 구성은 대본, 배우, 사운드, 카메라로 잡고 연출했다.</br>
 
-![DragonStory StoryBoardManager Hieracrchy](https://github.com/KimSangWoo1/Scripts/issues/2)
+![DragonStory StoryBoardManager Hieracrchy](https://github.com/KimSangWoo1/Scripts/assets/59047886/8f894ce1-f487-4a99-8bef-8802c7b6db36)
 
 사용한 카메라 연출 기법 : Single Shot, Over the Shoulder Shot, Wide Shot, Dolly Shot, Insert Shot</br>
 
@@ -101,3 +101,14 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 
 0-1 악몽은 TimeLine을 사용하여 연출해보았고 나머지는 StoryBoardManager 등 기능으로 연출하였다.
 
+<h3> Talk System </h3>
+
+<h3> Dialog System </h3>
+
+<h3> Quest System </h3>
+
+<h3> Inventory </h3>
+
+
+* * *
+<h2> SkyShooting </h2>
