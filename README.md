@@ -1,6 +1,8 @@
 # Scripts
 제가 개발한 코드들을 모아 정리한 Repository입니다.  <br/>
 프로젝트 및 개발 최신 순서대로 정리하였습니다.  <br/>
+자세한 설명보다는 개발 코드를 보는 목적인 Repository입니다.  <br/>
+
 * * *
  <h2>로그라이크 Ability(개발중)</h2>
 현재 팀 프로젝트로 개발중입니다.  <br/>
@@ -60,4 +62,30 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 그 외 [ToonShader Code 및 블로그 정리 글](https://blog.naver.com/tkdqjadn/222961976090)
 
 * * *
-<h2> xxxxxProject </h2>
+<h2> 고라니 게임잼 JamJamJam </h2>
+해당 프로젝트 코드는 깃허브에서 볼 수 있습니다.
+
+[고라니 게임잼](https://github.com/KimSangWoo1/JamJamJam)
+
+
+* * *
+<h2> 슈퍼셀 하이퍼 케쥬얼 게임잼</h2>
+제가 맡은 부분은 
+Player 조작
+Item,
+Effect
+Sound,
+Player와 관련된 UI
+배경 효과 및 설정
+이었습니다.
+
+제가 개발한 코드들만 보실 수 있습니다.
+[Anger of Whale 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Gate%20Guardian/Deploy%20Point)
+[게임 플레이하기 ](https://shinee0382.itch.io/butty-butty)
+
+
+* * *
+<h2> 슈퍼셀 하이퍼 케쥬얼 게임잼</h2>
+
+
+
