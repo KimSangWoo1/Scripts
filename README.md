@@ -91,7 +91,7 @@ ScriptableObject를 많이 사용했음을 미리 말씀드립니다.
 드래곤 스토리에 관한 영상들은 유튜부를 통해 모두 보실 수 있습니다.</br>
 [![Video Label](http://img.youtube.com/vi/mm3fohTzxDE/0.jpg)](https://www.youtube.com/watch?v=mm3fohTzxDE&list=PL5YJPokUujK0LmcBRhScjPI-gGC4x7M7F&index=4)
 
-<h3> 스토리 연출 , 컷씬 </h3>
+<h3>1. 스토리 연출 , 컷씬 </h3>
 DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출되는 느낌의 스토리 연출 기능을 만들어 보았다.</br>
 기본 구성은 대본, 배우, 사운드, 카메라로 잡고 연출했다.</br>
 
@@ -103,29 +103,29 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 
 0-1 악몽은 TimeLine을 사용하여 연출해보았고 나머지는 StoryBoardManager 등 기능으로 연출하였다.
 
-<h3> Talk System </h3>
+<h3>2. Talk System </h3>
 
 [DragonStory Talk System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Talk) </br>
 
 [![Video Label](http://img.youtube.com/vi/5WbHuWxsRuo/0.jpg)](https://www.youtube.com/5WbHuWxsRuo)
 
-<h3> Dialog System </h3>
+<h3>3. Dialog System </h3>
 
 [DragonStory Dialog System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Dialog) </br>
 
 [![Video Label](http://img.youtube.com/vi/mnS3If7S_W0/0.jpg)](https://www.youtube.com/mnS3If7S_W0)
 
-<h3> Quest System </h3>
+<h3>4. Quest System </h3>
 
 [DragonStory Quest System 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Quest) </br>
 
 [![Video Label](http://img.youtube.com/vi/aHTmvMXNaJA/0.jpg)](https://www.youtube.com/aHTmvMXNaJA)
 
-<h3> Inventory </h3>
+<h3>5. Inventory </h3>
 
 [DragonStory Inventory 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Inventory) </br>
 
-<h3> TPS Cam </h3>
+<h3>6. TPS Cam </h3>
 유니티에서 제공하는 시네머신 카메라를 사용하지 않고 구현한 TPS 카메라입니다.
 
 [DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/TPS) </br>
@@ -134,5 +134,22 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 
 * * *
 <h2> SkyShooting </h2>
+SkyShooting은 졸업 후 처음으로 Google Play Store에 출시한 게임입니다.
+1인 개발로 브롤스타즈의 슛팅 , Snake.io 의 멀티 대전의 재미를 살려서 만드려고 했습니다.
+Photon Pun2로 멀티 대전을 만드려 했지만 Pun2 동기화의 기술적 한계로 추후에 PVP로 변경하였음을 알려드립니다.
+Goolge Play Store에는 현재 1인 모드만 가능한 빌드 파일입니다.
 
+[Google Play Store Link](https://play.google.com/store/apps/details?id=com.ksw.SkyShooting)
 
+<h3> PVP </h3>
+닌텐도 스위치의 포켓몬 소드 실드에서 포켓몬이 대전을 참고하여 카메라 연출을 하였습니다.
+
+[DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/PVP) </br>
+
+[![Video Label](http://img.youtube.com/vi/oa--9z9wPeU/0.jpg)](https://www.youtube.com/oa--9z9wPeU)
+
+<h3> 매칭 </h3>
+
+<h3> </h3>
+
+<h3> </h3>
