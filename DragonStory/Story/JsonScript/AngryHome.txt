@@ -1,0 +1,289 @@
+{
+  "Title" : "약속의 장소",
+  "Date" : "2022.05.11",
+  "Writer" : "김상우",
+  "Chapter" : 1,
+  "Part" : 2,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TITLE",
+				"Number" : 1,
+				"Explanation" : "앵그리 집에 있는 앵그리와 해피 그리고 배경을 전체 Full Shot을 찍는다, 챕터 제목과 함께 Blur처리가 된 배경을 보여준다" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "아 드디어 도착했네",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "DIZZY",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "WIDE로 해피와 앵그리를 배경을 잡아준다 캐릭터간의 서로 높이 좌우 위치를 균등하게 잡아줘 서로 대등한 존재와 유대감이 있음을 연출함" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "앵그리",
+				"Content" : "늦었잖아 해피,\n이미 얘들은 장로님이 오라고 한 '장소'로 갔다고",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "ANGRY",
+				"Act" : "ROAR" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+				{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "미안 미안 오면서 그리드랑 얘기하느라 늦어버렸네",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "앵그리",
+				"Content" : "그리드가 귀찮게 굴었나보구나\n근데 요즘 따라 그리드가 먹을거에 욕심을 부리더라",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "앵그리",
+				"Content" : "저번에는 내 음식도 뺐어 가더라니깐\n내 동생이지만 이상해진거 같아",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "TEARS",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "앵그리",
+				"Content" : "나도 요즘 따라 화가 자꾸 난다니까\n하하",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "SMILE",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "앵그리 너가 화를 내다니\n상상이 안가는걸 하하",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "SMILE",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "(오늘 자면서 내가 절벽에서 떨어지고 나는걸 봤는데\n 나도 이상해진건가)",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "DIZZY",
+				"Act" : "NONE" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "앵그리",
+				"Content" : "자 얼른 더 늦기 전에 가자",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "NORMAL",
+				"Act" : "JUMP" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}

@@ -1,0 +1,624 @@
+{
+  "Title" : "혼돈",
+  "Date" : "2022.05.27",
+  "Writer" : "김상우",
+  "Chapter" : 2,
+  "Part" : 1,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TITLE",
+				"Number" : 1,
+				"Explanation" : "모든 드래곤의 모습을 보여준다" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "이상하군...",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "해피 너는 왜 혼돈에 빠지지 않는거지..",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "상관없지 어차피 시간 문제야, 혼돈의 에너지는 점점 더 강력해질태니까",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "넌 누구고 내 친구들은 왜 저렇게 됐지?",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "얼른 내 친구들을 돌려놔!!!",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "TEARS",
+				"Act" : "ROAR" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "흥.. 너는 우리가 누구라고 생각하지",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "우리가 어떻게 태어났고 우리의 존재가 무엇인지\n 아무런 의문도 생각도 든적이 없나",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : ". . . .너는 알고 있다는거야?",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "NONE" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "멍청하기는 '위즈덤'이 여태 아무것도 알려주지도 않았나",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "우리는 각자 강력한 사념체가 구체화 된 즈가다",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 3,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "세상의 강한 에너지를 가진 사념체가 존재하면\n온 세상을 덮어 장악하지 않기 위해 하나로 뭉쳐 구체화를 해야 한다.",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "신은 구체화 한 사념체를 그냥 두지 않으시고\n각각의 사념체들은 3가지 생물로 나뉘게 했다",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "하늘과 바다 그리고 땅의 생물을 다스리는 권한을 가지는 생물로",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "하늘은 '즈가', 바다는 '레비아탄', 땅은 '베히모스'에게 모든 권한을 맡겼지",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "나는 세상이 창조되기 전 존재하던 혼돈의 사념체\n장로는 세상을 창조하기 위한 지혜의 사념체지",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "지금은 힘을 잃어 돼지 같은 모습이 되었지만\n이제 태초의 모습과 힘이 점점 돌아올것이다.",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "도대체 무슨 소리야.. 우리가 그런 존재라니",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "이제 너의 친구들도 각자의 사념체의 에너지가 점점 흘러나와\n본래의 모습이 되겠지",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "카오스",
+				"Content" : "자 '칠죄종'들아 너희들의 원래 에너지를 느끼도록 해라",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "기다려!!",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "ANGRY",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+				{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "친구들을 돌려줘!!",
+				"Auto" : false
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "ANGRY",
+				"Act" : "ROAR" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}

@@ -1,0 +1,823 @@
+{
+  "Title" : "드래곤",
+  "Date" : "2022.06.03",
+  "Writer" : "김상우",
+  "Chapter" : 3,
+  "Part" : 1,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TITLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "위즈덤",
+				"Content" : "해피 드디어 해냈구나",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "너가 친구들을 구하고 우리를 구한거야",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "카오스는 이미 어디론가 가버렸더구나",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "우리 에너지를 폭주시키려고 하다니\n이런 일들은 원래 불가능한데..",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "카오스가 다시 오기 전까지 막을 방법을 내가 알아내도록 하마",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "DIZZY",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "지금은 친구를 구한 해피와 무사히 돌아온 친구들과 같이 행복한 시간을 보내자",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+		
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "네 장로님만 믿도록 할게요",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "SMILE",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "궁금한게 있는데 7대죄 중 한명은 제가 맞나요?",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 5,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "해피 너는 7대죄가 아니다\n나머지 한명은 지금... 나중에 알려주마 하하하",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "하하핫 알겠어요\n그럼 앞으로 우리는 어떻게 살아가야 하죠?",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "SMILE",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 4,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "에너지, 사념체, 즈가.. 우리는 무엇으로 살아가야 좋은걸까요?",
+				"Auto" : false 
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "DIZZY",
+				"Act" : "TALK" 
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" :
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "그래 너희들이 처음 알은 사실에 혼동이 왔겠구나\n흠.... 무엇이 좋을까..",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 5,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "그래 인간이 지어준 이름 중 가장 마음에 들던 이름이 었어\n그것이 좋겠구나",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "SMILE",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "그게 무엇인가요?",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "드래곤",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "우리는 드래곤이다.",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 3,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "하하하 드래곤..\n드래곤이라니 너무 좋은데요!!",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "HAPPY",
+				"Act" : "JUMP"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 3,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "앞으로 우리 드래곤들의 이야기를 만들어가자꾸나",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "얏호~",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "JEALOUSY",
+				"Emotion" : "SMILE",
+				"Act" : "ROAR"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "신난다~~",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "LAZY",
+				"Emotion" : "SMILE",
+				"Act" : "JUMP"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "나는 드래곤~~",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "ANGRY",
+				"Emotion" : "HAPPY",
+				"Act" : "YES"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "하하핫",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "GREED",
+				"Emotion" : "HAPPY",
+				"Act" : "JUMP"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "너무 좋아~!",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "LUST",
+				"Emotion" : "HAPPY",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "드래곤들",
+				"Content" : "예이~~",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "STINGY",
+				"Emotion" : "HAPPY",
+				"Act" : "ROAR"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "DOLLY",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "드래곤 이야기 시작이다~~!!~~",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "HAPPY",
+				"Act" : "ROAR"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 3,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : ""
+			},
+			"Cinematography" :
+			{
+				"Shot" : "TITLE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "카오스",
+				"Content" : "드래곤.. . . . .\n흥! . .",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 3,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "카오스",
+				"Content" : "내가 다시 올때 진정한 혼돈이 올것이다.",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "CHAOS",
+				"Emotion" : "CHAOS_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 3,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "CHAOS",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}
+
+

@@ -1,0 +1,177 @@
+{
+  "Title" : "악몽",
+  "Date" : "2021.08.10",
+  "Writer" : "김상우",
+  "Chapter" : 0,
+  "Part" : 1,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : " 도...도망쳐야 돼",
+				"Auto" : true
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "앞으로 갈 수 밖에 없어",
+				"Auto" : true
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "...",
+				"Auto" : true 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "안돼~~",
+				"Auto" : true 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "내가.. 날수 있었나?",
+				"Auto" : true 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSoundSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "내가 하늘을 날고있어!!",
+				"Auto" : true 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TIMELINE",
+				"Number" : 0,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}

@@ -1,0 +1,571 @@
+{
+  "Title" : "세상의 진실",
+  "Date" : "2022.05.27",
+  "Writer" : "김상우",
+  "Chapter" : 2,
+  "Part" : 2,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TITLE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "해피",
+				"Content" : "장로님 무사하셨군요\n이게 도대체 무슨 일 입니까",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "해피 역시.. 너만은 괜찮은가 보구나",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "카오스가 인간 세계와 우리가 살고 있는 세계를 연결하려는 구나",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "인간들이 혼돈과 칠대죄의 에너지에 삼켜질까 두렵구나",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "인간들..??",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "DIZZY",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "인간이 누구고 사념체, 에너지 무슨 말인지 모르겠어요",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+		
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "신이 우리와 인간을 창조했고 우리와 인간들은 원래 협력자였지",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "하지만 인간들이 신과의 약속을 어겨 태초의 나무 열매를 먹게 되었찌",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "인간들은 인지하지 못했던 7대죄의 사념을 알게 된 후로\n세상의 7대죄의 에너지가 강력해지게 됐다",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "그렇게 사람들을 보호하기 위해 카오스와 나는 여기서 7대죄의 에너지를 억제하고 태초의 나무를 지키게 되었지",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "그렇다면 지금 인간들은 어디있죠?",
+				"Auto" : false 
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" :
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" :
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "태초의 나무를 찾아오는 인간들은 있었지\n하지만 언제부턴가 인간세계와 여기는 분리되었다",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "그 다음 7대죄가 지금의 모습으로 깨어났지만\n해피 너는 어느순간 우리 앞에 나타났다",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "기억이 없는 너에게\n첫 모습이 밝고 좋은 에너지를 느껴 해피라고 이름을 지은게다",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 2,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "해피 이제 시간이 없다.. 나는 카오스를 막으러 가야 한다",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "7대죄의 에너지가 폭주하기 전에 막아야 세상이 위험을 막을수 있단다",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : ""
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "하지만 이상해진 친구들을 어떻게 제대로 정신이 들게하죠",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "TEARS",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "위즈덤",
+				"Content" : "너 또한 우리의 옛 모습의 힘을 조금은 얻었을게다\n그 힘으로 저기 있는 친구들을 구하거라",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "WISDOM",
+				"Emotion" : "WISDOM_NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 3,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "WISDOM",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "알겠어요 장로님 제가 친구들을 구할게요!!",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "ROAR"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : " "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : false,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}
+
+

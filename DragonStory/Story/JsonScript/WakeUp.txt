@@ -1,0 +1,375 @@
+{
+  "Title" : "꿈에서 깨어난 해피",
+  "Date" : "2022.02.25",
+  "Writer" : "김상우",
+  "Chapter" : 1,
+  "Part" : 1,
+  "Sequence" : 
+	[
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "",
+				"Content" : "",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "NONE",
+				"Emotion" : "",
+				"Act" : "" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "TITLE",
+				"Number" : 1,
+				"Explanation" : "동굴 방향으로 전체 Full Shot을 찍는다, 챕터 제목과 함께 Blur처리가 된 배경을 보여준다" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "NONE",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{			
+ 				"Name" : "???",
+				"Content" : "야 해피, 자는척하는거야? \n무슨 새로운 놀이라도 하는거냐.",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{	
+				"Actor" : "ANGRY",
+				"Emotion" : "HAPPY",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "앵그리만 Single로 찍으며 몽롱한 느낌을 이어서 주기 위해 Blur처리가 된 배경을 보여준다" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "어 뭐야????",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "FAINT",
+				"Act" : "DIE" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "해피만 Single로 찍으며 아직 몽롱한 느낌을 이어서 주기 위해 Blur처리가 된 배경을 보여준다"
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "이게 무슨 기억이지.. \n너는 왜 거꾸로 서있냐?",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "DIE"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : "해피만 Single로 찍으며 아직 몽롱한 듯  Blur처리가 된 배경을 보여준다" 
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "???",
+				"Content" : "너가 누워있는건데, 정신 안차리냐!",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "ANGRY",
+				"Emotion" : "ANGRY",
+				"Act" : "ROAR"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "앵그리만 Single로 찍으며 아직 몽롱한 듯 Blur처리가 된 배경을 보여준다"
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "아 미안 내가 분명히 자고 일어났는데.. \n방금 그건 뭐지?",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "SINGLE",
+				"Number" : 2,
+				"Explanation" : "해피만 Single로 찍으며 아직 몽롱한 듯  Blur처리가 된 배경을 보여준다"
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+		
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "앵그리, 내가 무슨 절벽에서 떨어졌다가 \n내가 하늘을 날고 있었어",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "HAPPY",
+				"Act" : "YES" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : "두 드래곤의 관계를 이어주기 위한 OTS샷 연출"
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "앵그리",
+				"Content" : "무슨 소리야. \n우리가 하늘을 어떻게 날아 어디 아프냐.",
+				"Auto" : false
+			},
+			"Cast" : 
+			{
+				"Actor" : "ANGRY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "OTS",
+				"Number" : 2,
+				"Explanation" : "앵그리와 해피의 유대관계를 이어준다"
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "그러니까 이상하네.. \n분명히 생생했던 기억인데.",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" : 
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "Two Shot으로 현재 상황과 서로의 관계, 위치, 모습을 드러내줌 "
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "앵그리",
+				"Content" : "헛소리 그만하고 얼른 우리 집으로 와.",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "ANGRY",
+				"Emotion" : "NORMAL",
+				"Act" : "REST"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "WIDE",
+				"Number" : 1,
+				"Explanation" : "Two Shot으로 현재 상황과 서로의 관계, 위치, 모습을 드러내줌"
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "아 오늘 그날인가.",
+				"Auto" : false 
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK" 
+			},
+			"Cinematography" :
+			{
+				"Shot" : "OTS",
+				"Number" : 1,
+				"Explanation" : "동굴 방향으로 전체 Full Shot을 찍는다, 챕터 제목과 함께 Blur처리가 된 배경을 보여준다"
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" :
+			{
+ 				"Name" : "앵그리",
+				"Content" : "그래 늦지 않게 와, \n나는 먼저 가있을게",
+				"Auto" : false 
+			},
+			"Cast" : 
+			{
+				"Actor" : "ANGRY",
+				"Emotion" : "NORMAL",
+				"Act" : "JUMP"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 3,
+				"Explanation" : "앵그리가 떠난다는 모습을 더 확실하게 주기 위해 Single Shot으로 찍는다 "
+			},
+			"Audio" :
+			{
+				"Speaker" : "ANGRY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		},
+
+		{ 
+			"Script" : 
+			{
+ 				"Name" : "해피",
+				"Content" : "알겠어. \n금방 갈게",
+				"Auto" : false
+			},
+			"Cast" :
+			{
+				"Actor" : "HAPPY",
+				"Emotion" : "NORMAL",
+				"Act" : "TALK"
+			},
+			"Cinematography" :
+			{
+				"Shot" : "SINGLE",
+				"Number" : 1,
+				"Explanation" : " 앵그리는 떠났다는 신호로 마무리로 해피만 보여준다."
+			},
+			"Audio" :
+			{
+				"Speaker" : "HAPPY",
+				"BackgroundPlaying" : true,
+				"BackgroundSoundNumber" : 0,
+				"EffectSound" : "NONE"
+			}
+		}
+	]
+}
+
+
