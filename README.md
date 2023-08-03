@@ -10,10 +10,10 @@
 * * *
 <h3>1. Ability Data 구조</h3>
 
-[데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
-
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
-데이터 클래스
+<br/>
+데이터 클래스 구조를 어떻게 짰는지 보여드리는 코드입니다.<br/>
+[데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
 
 <h3>2. Ability 시스템</h3>
 Player 능력을 강화 시켜주는 시스템입니다.  <br/>
