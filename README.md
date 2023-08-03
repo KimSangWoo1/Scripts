@@ -85,6 +85,8 @@ Player와 관련된 UI </br>
 
 * * *
 <h2> DragonStory </h2>
+드래곤 스토리는 ScriptableObject를 처음 사용해본 Project여서 
+ScriptableObject를 많이 사용했음을 미리 말씀드립니다.
 
 드래곤 스토리에 관한 영상들은 유튜부를 통해 모두 보실 수 있습니다.</br>
 [![Video Label](http://img.youtube.com/vi/mm3fohTzxDE/0.jpg)](https://www.youtube.com/watch?v=mm3fohTzxDE&list=PL5YJPokUujK0LmcBRhScjPI-gGC4x7M7F&index=4)
@@ -121,6 +123,15 @@ DragonStory는 Story게임으로 메인 퀘스트 진행시 컷씬처럼 연출�
 
 <h3> Inventory </h3>
 
+[DragonStory Inventory 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/Inventory) </br>
+
+<h3> TPS Cam </h3>
+
+[DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/DragonStory/TPS) </br>
+
+[![Video Label](http://img.youtube.com/vi/QwdG4RfeQ0s/0.jpg)](https://www.youtube.com/QwdG4RfeQ0s)
 
 * * *
 <h2> SkyShooting </h2>
+
+
