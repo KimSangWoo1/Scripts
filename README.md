@@ -7,14 +7,14 @@
 로그라이크에서 흔히 볼 수 있는 능력치를 선택해서 Player에 전투력이 올라가는 시스템입니다.
 80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다. 
 * * *
-<h3>Ability Data 구조</h3>
+<h3>1. Ability Data 구조</h3>
 
 [데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
 
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
 데이터 클래스
 
-<h3>Ability 시스템</h3>
+<h3>2. Ability 시스템</h3>
 Player 능력을 강화 시켜주는 시스템입니다.
 아직 전투 시스템이 개발되지 않았기 때문에 제대로 된 영상을 첨부하지는 못하지만 
 보통적인 흐름은
