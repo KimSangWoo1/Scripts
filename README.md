@@ -10,6 +10,14 @@
 80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다.   <br/>
 
 * * *
+<h3>1. 로그라이크 2D 절차적 맵 생성</h3>
+
+![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
+
+[Map 코드 보기](https://github.com/KimSangWoo1/Scripts/Map)
+
+[블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223212297657)
+
 <h3>1. Ability Data 구조</h3>
 
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
