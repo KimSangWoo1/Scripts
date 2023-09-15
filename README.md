@@ -8,7 +8,7 @@
 Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용
 절차적 타일 구성 + 절차적 맵 구성(각 방의 특성 설정)
 
-![로그라이크 2D 절차적 맵 구성](https://github.com/KimSangWoo1/Scripts/assets/59047886/51473c7f-a8f3-4abb-bdbb-9f454f8c6ac0)
+![image](https://github.com/KimSangWoo1/Scripts/assets/59047886/51473c7f-a8f3-4abb-bdbb-9f454f8c6ac0)
 
 [Map 코드 보기](https://github.com/KimSangWoo1/Scripts/Map)
 
