@@ -5,7 +5,7 @@
 
 * * *
 <h3>1. 로그라이크 2D 절차적 맵 생성</h3>
-Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용
+Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용  <br/>
 절차적 타일 구성 + 절차적 맵 구성(각 방의 특성 설정)
 
 ![image](https://github.com/KimSangWoo1/Scripts/assets/59047886/51473c7f-a8f3-4abb-bdbb-9f454f8c6ac0)
