@@ -4,12 +4,6 @@
 자세한 설명보다는 개발의 전체코드 및 중요코드를 보는 목적인 Repository입니다.  <br/>
 
 * * *
- <h2>로그라이크 Ability(개발중)</h2>
-현재 팀 프로젝트로 개발중입니다.  <br/>
-능력치를 선택해서 Player에 전투력이 올라가는 시스템입니다.  <br/>
-80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다.   <br/>
-
-* * *
 <h3>1. 로그라이크 2D 절차적 맵 생성</h3>
 Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용
 절차적 타일 구성 + 절차적 맵 구성(각 방의 특성 설정)
@@ -20,6 +14,13 @@ Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용
 
 [블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223212297657)
 
+* * *
+ <h2>로그라이크 Ability(개발중)</h2>
+현재 팀 프로젝트로 개발중입니다.  <br/>
+능력치를 선택해서 Player에 전투력이 올라가는 시스템입니다.  <br/>
+80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다.   <br/>
+
+* * *
 <h3>1. Ability Data 구조</h3>
 
 ![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
