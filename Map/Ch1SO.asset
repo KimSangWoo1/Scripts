@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64068ddb0ac61e40af03cb29e35f3e5, type: 3}
+  m_Name: Ch1SO
+  m_EditorClassIdentifier: 
+  Chapter: 1
+  RoomCount: 16
+  ChapterRoom: {fileID: 9113314365727900117, guid: f5fd47345bb0f1b458a72c2a1eab1494, type: 3}
+  ChpaterRuleTiles:
+  - {fileID: 11400000, guid: fabc1877b2ae61040b1c538e8b34e1fc, type: 2}
+  - {fileID: 11400000, guid: 1ed71b47a5f125946bbb6e62a0876b98, type: 2}
+  ChapterRoomInfo:
+    PropCostMin: 1
+    PropCostMax: 6
+    TrapCostMin: 1
+    TrapCostMax: 2
+    MonsterCostMin: 6
+    MonsterCostMax: 10
+  Props:
+  - {fileID: 2675304124394494778, guid: f5494825caa150347b27b3fc5e50bb7f, type: 3}
+  - {fileID: 7121983725994274995, guid: 958075161a71ff64dbef49e740b1661e, type: 3}
+  - {fileID: 7222225450503330264, guid: 7214a36379e8608489573950ef48e546, type: 3}
+  - {fileID: 6955985071890022153, guid: d7109356d9e6a7244b4477dc2ec09a66, type: 3}
+  Trabs:
+  - {fileID: 3938300095829348346, guid: e6855bf1e51f53242afc374b7a2519dd, type: 3}
+  - {fileID: 7512413216861642917, guid: 30e2918b91c364b44afe68d48abdbdde, type: 3}
+  - {fileID: 9055748644402688357, guid: 8f17db737a1200b4e9b5163834d67901, type: 3}
+  - {fileID: 5613948091396544319, guid: 3cf7b058901f92749b67aec666382322, type: 3}
+  EventRooms:
+  - EventRoomType: 8
+    Npcs:
+    - {fileID: 3278769044105905717, guid: 16128fa4705be3e46840f25cf0172c67, type: 3}
+    Props:
+    - {fileID: 174950013877957594, guid: b05a026195d932844bb947f754a7c304, type: 3}
+  - EventRoomType: 9
+    Npcs:
+    - {fileID: 3015376003255829587, guid: 557710e305a287d439992c42bc542bbc, type: 3}
+    Props:
+    - {fileID: 2417723754502068622, guid: f4dab1dcb720492479528674113e87b3, type: 3}
+  - EventRoomType: 2
+    Npcs:
+    - {fileID: 2619103844362285307, guid: 854a3956db9d7a249b7d1f1a70b05ad2, type: 3}
+    Props: []
+  - EventRoomType: 3
+    Npcs:
+    - {fileID: 4297228201069072027, guid: abb9df9c354f78d489089ae5b5ac1150, type: 3}
+    Props: []
+  - EventRoomType: 4
+    Npcs:
+    - {fileID: 4092004278911679328, guid: c8ab3646f8935594c9bcf6b6be989ea9, type: 3}
+    Props: []
+  MonsterRooms:
+  - monsterRoomType: 1
+    Monster:
+    - {fileID: 3938300095829348346, guid: e6855bf1e51f53242afc374b7a2519dd, type: 3}
+    RoomCreateCount: 1
+  - monsterRoomType: 2
+    Monster:
+    - {fileID: 7512413216861642917, guid: 30e2918b91c364b44afe68d48abdbdde, type: 3}
+    RoomCreateCount: 1
+  - monsterRoomType: 3
+    Monster:
+    - {fileID: 9055748644402688357, guid: 8f17db737a1200b4e9b5163834d67901, type: 3}
+    RoomCreateCount: 1
+  - monsterRoomType: 4
+    Monster:
+    - {fileID: 5613948091396544319, guid: 3cf7b058901f92749b67aec666382322, type: 3}
+    RoomCreateCount: 1
+  SpecialRoomInfos:
+  - SpecialRoomType: 1
+    CriteriaRoomType: 9
+    monsterRoomType: 1
+    Distance: 2
+    RandomValue: 100
+    isIncluded: 1
+    SpecialMonsters:
+    - Monster: {fileID: 6425475137415843356, guid: a71a8a9db7f163f4fabaff843287abfb, type: 3}
+      Count: 1
+  - SpecialRoomType: 2
+    CriteriaRoomType: 8
+    monsterRoomType: 0
+    Distance: 3
+    RandomValue: 90
+    isIncluded: 1
+    SpecialMonsters:
+    - Monster: {fileID: 8170865026149294362, guid: e4965f141fcaf1c44b78005ac3bca1b6, type: 3}
+      Count: 1
