@@ -156,7 +156,7 @@ Goolge Play Store에는 현재 1인 모드만 가능한 빌드 파일입니다.
 <h3> PVP </h3>
 닌텐도 스위치의 포켓몬 소드 실드에서 포켓몬이 대전을 참고하여 카메라 연출을 하였습니다.
 
-[DragonStory TPS 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShootring/PVP) </br>
+[PVP 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/SkyShooting/PVP) </br>
 
 [![Video Label](http://img.youtube.com/vi/oa--9z9wPeU/0.jpg)](https://www.youtube.com/oa--9z9wPeU)
 
