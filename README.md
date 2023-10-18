@@ -10,8 +10,8 @@ Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용 
 
 ![image](https://github.com/KimSangWoo1/Scripts/assets/59047886/51473c7f-a8f3-4abb-bdbb-9f454f8c6ac0)
   <br/>
-[Map 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Map)
-[블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223212297657)
+[Map 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Map)   <br/>
+[블로그 정리 글 (영상 포함) ](https://blog.naver.com/tkdqjadn/223212297657)  <br/>
 
 * * *
  <h2>로그라이크 Ability(개발중)</h2>
