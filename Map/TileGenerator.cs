@@ -8,6 +8,8 @@ public class TileGenerator : MonoBehaviour
 {
 	[SerializeField]
 	Tilemap _tilemap;
+	[SerializeField]
+	Tilemap _notWalkTilemap;
 	RuleTile[] _ruleTiles;
 
 	[Header("Smooth Map")]
@@ -29,17 +31,8 @@ public class TileGenerator : MonoBehaviour
 	private List<SpecificCoord> _specificCoords = new List<SpecificCoord>();
 	private Vector3Int[,] _map;
 	private BoundsInt _roomSizeBound;
-	private BoundsInt _roomDrawBound; // TileMap Cell ±âÁØ °ª 
-	private BoundsInt _tileMapDrawBound; // _map[,] ±âÁØ °ª  _roomDrawBound¿Í ÀÇ¹Ì µ¿ÀÏ
-
-	[SerializeField]
-	private int _offsetL = 3;
-	[SerializeField]
-	private int _offsetR = 3;
-	[SerializeField]
-	private int _offsetT = 2;
-	[SerializeField]
-	private int _offsetB = 2;
+	private BoundsInt _roomDrawBound; // TileMap Cell ê¸°ì¤€ ê°’ 
+	private BoundsInt _tileMapDrawBound; // _map[,] ê¸°ì¤€ ê°’  _roomDrawBoundì™€ ì˜ë¯¸ ë™ì¼
 
 	[SerializeField]
 	private int _roomPadding;
@@ -48,15 +41,22 @@ public class TileGenerator : MonoBehaviour
 	private int _roomHeight;
 	private int _roomNumber;
 
-	private const int XMin = -28;
-	private const int XMax = 28;
-	private const int YMin = -13;
-	private const int YMax = 13;
+	//RoomSizeì—ì„œ Offsetì— ë”°ë¥¸ WalkAble ê³ ì • ì˜ì—­ ì •í•´ì£¼ê¸°
+	private const int _offsetL = 8;
+	private const int _offsetR = 8;
+	private const int _offsetT = 6;
+	private const int _offsetB = 6;
 
-	// ¸Ê ÃÖ¼Ò °æ°è Áö¿ª (º® ¾È)
+	//ë§µ (ë°©í–¥ë³„)íƒ€ì¼ ê°¯ìˆ˜ 
+	private const int XMin = -25;
+	private const int XMax = 25;
+	private const int YMin = -11;
+	private const int YMax = 11;
+
+	// RoomSizeì•ˆì— CreateAble ì˜ì—­ ê²½ê³„ ì •í•´ì£¼ê¸° (ë²½ ì•ˆ)
 	private const int OffsetMinL = 4;
 	private const int OffsetMinR = 4;
-	private const int OffsetMinT = 3;
+	private const int OffsetMinT = 4;
 	private const int OffsetMinB = 5;
 
 	public Tilemap Tilemap => _tilemap;
@@ -91,11 +91,11 @@ public class TileGenerator : MonoBehaviour
 		}
 	}
 
-    void Start()
+    public void Init()
 	{
 		_roomWidth = Mathf.Abs(XMin) + Mathf.Abs(XMax);
 		_roomHeight = Mathf.Abs(YMin) + Mathf.Abs(YMax);
-		RoomSize = new Vector2Int(_roomWidth+1, _roomHeight+1); // -1, 0 ,1  0ÀÌ Æ÷ÇÔµÇ±â ¶§¹®
+		RoomSize = new Vector2Int(_roomWidth+1, _roomHeight+1); // -1, 0 ,1  0ì´ í¬í•¨ë˜ê¸° ë•Œë¬¸
 	}
 
 	public void TileGenerate(Room room, RuleTile[] ruleTiles, int roomNumber)
@@ -120,14 +120,14 @@ public class TileGenerator : MonoBehaviour
         }
 	}
 
-	// ±Ô°İ¿¡ ¸Â°Ô ÀıÂ÷¾øÀÌ ¸Ê »ı¼º
+	// ê·œê²©ì— ë§ê²Œ ì ˆì°¨ì—†ì´ ë§µ ìƒì„±
 	private void SimpleGenerate()
     {
 		GroundFillMap();
 		//DrawTile();
 	}
 
-	// ±Ô°İ¿¡ ¸Â°Ô ÀıÂ÷ÀûÀ¸·Î Tile ±×¸®¸ç ¸Ê »ı¼º
+	// ê·œê²©ì— ë§ê²Œ ì ˆì°¨ì ìœ¼ë¡œ Tile ê·¸ë¦¬ë©° ë§µ ìƒì„±
 	private void ProceduralGenerate()
     {
 		RandomFillMap();
@@ -141,7 +141,7 @@ public class TileGenerator : MonoBehaviour
 		//DrawTile();
 	}
 
-	// ¹æ »çÀÌÁî ¼³Á¤
+	// ë°© ì‚¬ì´ì¦ˆ ì„¤ì •
 	private void SetRoomSize(int posX, int posY)
 	{
 		int signX = 0;
@@ -178,7 +178,7 @@ public class TileGenerator : MonoBehaviour
 		_tileMapDrawBound.yMax = _map.GetLength(1) - _offsetB;
 	}
 	
-	// ¹° Å¸ÀÏ ¸®¼Ò½º Æ¯¼º»ó ÀÌ»óÇÑ °÷ ÁÖº¯ ¹° Å¸ÀÏ Ã¤¿ì±â
+	// ë¬¼ íƒ€ì¼ ë¦¬ì†ŒìŠ¤ íŠ¹ì„±ìƒ ì´ìƒí•œ ê³³ ì£¼ë³€ ë¬¼ íƒ€ì¼ ì±„ìš°ê¸°
 	private void SmoothTile()
     {
 		foreach (var specificCoord in _specificCoords)
@@ -218,7 +218,7 @@ public class TileGenerator : MonoBehaviour
 		}
 	}
 
-	//È«¼ö Èå¸§ ¾Ë°í¸®Áò (ÀüºÎ Ã£À» ÇÊ¿ä ¾øÀ½ WallÀÌ …¼¾îÁ³À»¶§ WallCount °ª°ú ºñ±³¸¸ ÇÏ¸é µÇ±â ¶§¹®)
+	//í™ìˆ˜ íë¦„ ì•Œê³ ë¦¬ì¦˜ (ì „ë¶€ ì°¾ì„ í•„ìš” ì—†ìŒ Wallì´ ë‰ì–´ì¡Œì„ë•Œ WallCount ê°’ê³¼ ë¹„êµë§Œ í•˜ë©´ ë˜ê¸° ë•Œë¬¸)
 	private int FindConnectedWallCount(int gridX, int gridY, int minX, int minY, int maxX, int maxY)
     {
 		Queue<Coord> wallQue = new Queue<Coord>();
@@ -257,7 +257,7 @@ public class TileGenerator : MonoBehaviour
 		return connectWallCount;
     }
 
-	// Tile ±×¸®±â
+	// Tile ê·¸ë¦¬ê¸°
 	public void DrawTile(Vector3Int[,] map = null)
 	{
 		if (map != null) 
@@ -269,17 +269,26 @@ public class TileGenerator : MonoBehaviour
 			{
                 if (IsOutTileMapDrawBound(x, y))
                 {
-					_tilemap.SetTile(_map[x, y], _ruleTiles[0]);
-                }
+					//_tilemap.SetTile(_map[x, y], _ruleTiles[0]);
+					_notWalkTilemap.SetTile(_map[x, y], _ruleTiles[0]);
+				}
                 else
                 {
-					_tilemap.SetTile(_map[x, y], _ruleTiles[_map[x, y].z]);
+					if (_map[x, y].z == 0)
+					{
+						_tilemap.SetTile(_map[x, y], _ruleTiles[_map[x, y].z]);
+					}
+					else
+					{
+						_notWalkTilemap.SetTile(_map[x, y], _ruleTiles[_map[x, y].z]);
+
+					}
 				}
 			}
 		}
 	}
 
-	// Tile Áö¿ì±â
+	// Tile ì§€ìš°ê¸°
 	public void ClearTile(Vector3Int[,] map = null)
 	{
 		if (map != null)
@@ -289,13 +298,18 @@ public class TileGenerator : MonoBehaviour
 		{
 			for (int y = 0; y < _map.GetLength(1); y++)
 			{
+
 				_tilemap.SetTile(_map[x, y], null);
 				_tilemap.RefreshTile(_map[x, y]);
+
+				_notWalkTilemap.SetTile(_map[x, y], null);
+				_notWalkTilemap.RefreshTile(_map[x, y]);
+
 			}
 		}
 	}
 
-	// ±Ô°İ¿¡ ¸Â°Ô ¶¥ Tile·Î¸¸ Ã¤¿ò
+	// ê·œê²©ì— ë§ê²Œ ë•… Tileë¡œë§Œ ì±„ì›€
 	private void GroundFillMap()
     {
 		for (int x = 0, tileX = _roomSizeBound.xMin; tileX <= _roomSizeBound.xMax; x++, tileX++)
@@ -309,7 +323,7 @@ public class TileGenerator : MonoBehaviour
 
 	#region Cellular Automata - Cave
 
-	// Cellular Automata - Cave °øÅë ·£´ı ¸Ê »ı¼º
+	// Cellular Automata - Cave ê³µí†µ ëœë¤ ë§µ ìƒì„±
 	private void RandomFillMap()
 	{
 		System.Random pseudoRandom = new System.Random(seed.GetHashCode() + _roomNumber);
@@ -371,7 +385,7 @@ public class TileGenerator : MonoBehaviour
 		}
 	}
 
-	// ÁÖÀ§ º® °¹¼ö Ã¼Å©
+	// ì£¼ìœ„ ë²½ ê°¯ìˆ˜ ì²´í¬
 	int GetSurroundingWallCount(int gridX, int gridY, bool isOutSideAdd = false)
 	{
 		int wallCount = 0;
@@ -397,7 +411,7 @@ public class TileGenerator : MonoBehaviour
 	}
 
 	#region Regions Control - Flood flow Algorithm
-	// Regions¿¡ Å¸ÀÏ °¹¼ö°¡ ÀÛÀ¸¸é ¾ø¾Ö±â
+	// Regionsì— íƒ€ì¼ ê°¯ìˆ˜ê°€ ì‘ìœ¼ë©´ ì—†ì• ê¸°
 	void ProcessMap()
 	{
 		List<List<Coord>> wallRegions = GetRegions(1);
@@ -446,7 +460,7 @@ public class TileGenerator : MonoBehaviour
 		}
 	}
 
-	// °°Àº Å¸ÀÏ Regions ¹İÈ¯
+	// ê°™ì€ íƒ€ì¼ Regions ë°˜í™˜
 	List<List<Coord>> GetRegions(int tileType)
 	{
 		List<List<Coord>> regions = new List<List<Coord>>();
@@ -471,7 +485,7 @@ public class TileGenerator : MonoBehaviour
 		return regions;
 	}
 
-	// Flood flow (È«¼ö Èå¸§ ¾Ë°í¸®Áò)
+	// Flood flow (í™ìˆ˜ íë¦„ ì•Œê³ ë¦¬ì¦˜)
 	List<Coord> GetRegionTiles(int startX, int startY)
 	{
 		List<Coord> tiles = new List<Coord>();
@@ -506,7 +520,7 @@ public class TileGenerator : MonoBehaviour
 				}
 			}
 
-			// ¸®¼Ò½º Å¸ÀÏ Æ¯¼º ¶§¹®¿¡ Rule Tile¿¡ À§¹İµÊ 
+			// ë¦¬ì†ŒìŠ¤ íƒ€ì¼ íŠ¹ì„± ë•Œë¬¸ì— Rule Tileì— ìœ„ë°˜ë¨ 
 			if(tileType == 1 && connectCount <= 2)
             {
 				_map[tile.TileX, tile.TileY].z = 0;
@@ -519,7 +533,7 @@ public class TileGenerator : MonoBehaviour
 		return tiles;
 	}
 
-	// °°Àº Å¸ÀÏ Regions ¹İÈ¯
+	// ê°™ì€ íƒ€ì¼ Regions ë°˜í™˜
 	public List<Coord> GetNonCollisionRegions(Vector3Int[,] map,int tileType)
 	{
 		List<Coord> region = new List<Coord>();
@@ -541,7 +555,7 @@ public class TileGenerator : MonoBehaviour
 							region.Add(new Coord(x, y));
 						}
 					}
-				}
+                }
 			}
 		}
 		return region;
@@ -565,7 +579,7 @@ public class TileGenerator : MonoBehaviour
 	#endregion
 	#endregion
 
-	// ¹° Å¸ÀÏ ±×¸®±â 3x3 (¸®¼Ò½º ¹× Å¸ÀÏ ±ÔÄ¢ Á¦ÇÑ ¶§¹®)
+	// ë¬¼ íƒ€ì¼ ê·¸ë¦¬ê¸° 3x3 (ë¦¬ì†ŒìŠ¤ ë° íƒ€ì¼ ê·œì¹™ ì œí•œ ë•Œë¬¸)
 	private void FillWall3X3(int x, int y)
     {
 		for (int neighbourX = x - 1; neighbourX <= x + 1; neighbourX++)
@@ -580,7 +594,7 @@ public class TileGenerator : MonoBehaviour
 		}
 	}
 
-	// ¹° Å¸ÀÏ ´ÜÀ§ ±×¸®±â 2x2
+	// ë¬¼ íƒ€ì¼ ë‹¨ìœ„ ê·¸ë¦¬ê¸° 2x2
 	private void RandomFillRactangle(int x , int y, int tileX, int tileY, int tileType)
     {
 		int midX = _roomWidth / 2;
@@ -590,12 +604,12 @@ public class TileGenerator : MonoBehaviour
 		{
             if (y < midY)
             {
-				// ¿À¸¥ ¾Æ·¡ ´ë°¢ ±×¸®±â
+				// ì˜¤ë¥¸ ì•„ë˜ ëŒ€ê° ê·¸ë¦¬ê¸°
 				FillRectangle(x,y,1,1,tileX, tileY, tileType);
 			}
 			else
             {
-				// ¿Ş À§ ´ë°¢ ±×¸®±â
+				// ì™¼ ìœ„ ëŒ€ê° ê·¸ë¦¬ê¸°
 				FillRectangle(x,y,-1,-1, tileX, tileY, tileType);
 			}
 		}
@@ -603,19 +617,19 @@ public class TileGenerator : MonoBehaviour
 		{
 			if (y < midY)
 			{
-				// ¿Ş ¾Æ·¡ ´ë°¢ ±×¸®±â
+				// ì™¼ ì•„ë˜ ëŒ€ê° ê·¸ë¦¬ê¸°
 				FillRectangle(x,y,-1,1, tileX, tileY, tileType);
 			}
 			else
 			{
-				// ¿À¸¥ À§ ´ë°¢ ±×¸®±â
+				// ì˜¤ë¥¸ ìœ„ ëŒ€ê° ê·¸ë¦¬ê¸°
 				FillRectangle(x,y,1,-1, tileX, tileY, tileType);
 			}
 		}
 		
 	}
 
-	// Å¸ÀÏ ±×¸®±â 2X2
+	// íƒ€ì¼ ê·¸ë¦¬ê¸° 2X2
 	private void FillRectangle(int centralX, int centralY, int xRange, int yRange, int tileX, int tileY, int tileType=1)
 	{
 		int startX = (xRange > 0) ? centralX : centralX + xRange;
