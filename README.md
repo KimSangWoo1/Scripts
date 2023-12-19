@@ -20,12 +20,6 @@ Unity TileMap + CelluarAutomata + Drunked walk + Flood Fill 알고리즘 사용 
 80%완성된 코드이고 대부분의 구조와 기능이 완성된 코드입니다.   <br/>
 
 * * *
-<h3>1. Ability Data 구조</h3>
-
-![Ability 데이터 구조](https://github.com/KimSangWoo1/Scripts/assets/59047886/9a4ae361-2b50-4f83-8549-ebd069644c9b)
-<br/>
-데이터 클래스 구조를 어떻게 짰는지 보여드리는 코드입니다.<br/>
-[데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
 
 <h3>2. Ability 시스템</h3>
 Player 능력을 강화 시켜주는 시스템입니다.  <br/>
@@ -40,6 +34,8 @@ Player 능력을 강화 시켜주는 시스템입니다.  <br/>
 [Ability 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/System)
 
 [Event 코드 보기](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Event)
+
+[데이터 코드](https://github.com/KimSangWoo1/Scripts/tree/main/Ability/Model)
 
 [![Video Label](http://img.youtube.com/vi/XwQMGnm2wgs/0.jpg)](https://youtu.be/XwQMGnm2wgs)
 
