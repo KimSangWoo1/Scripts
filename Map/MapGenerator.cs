@@ -30,23 +30,20 @@ public class MapGenerator : MonoBehaviour
     [SerializeField]
     private bool _mapDraw;
 
-    private void OnEnable()
+    private void Start()
     {
-        _chpaterMapInfoSO = _mapSO.ChapterInfo[GameManager.Instance.Chatper - 1];
-#if UNITY_EDITOR
-        EventManager.Instance.Notify(EventType.AddKeyPress, new EventData.InputKeyData(eActionMapType.Dev, eDevKeyType.RandomMap.ToString(), AA));
-#endif
+        GameManager.Instance.UpdateGameState(eGameState.MapGeneration);
+        _tileGenerator.Init();
+        _chpaterMapInfoSO = _mapSO.ChapterInfo[DataManager.Instance.GameData.Chatper - 1];
+        GenerateMap().Forget();
     }
-#if UNITY_EDITOR
-    private void AA(InputAction.CallbackContext context)
-    {
-        GenerateMap();
-    }
-#endif
 
-    // ∏  ª˝º∫
-    private async void GenerateMap()
+    // Îßµ ÏÉùÏÑ±
+    private async UniTask GenerateMap()
     {
+        //await SceneController.SceneChange(_chpaterMapInfoSO.SceneType);
+        DataManager.Instance.GameUtilsData.Chapter = _chpaterMapInfoSO.Chapter;
+
         List<RoomControl> roomControls = new List<RoomControl>();
         _rooms = new List<Room>();
         CheckSpecialAddRoom();
@@ -61,12 +58,13 @@ public class MapGenerator : MonoBehaviour
 
         for (int i = 0; i < _rooms.Count; i++)
         {
-            _tileGenerator.TileGenerate(_rooms[i], _chpaterMapInfoSO.ChpaterRuleTiles, i); //≈∏¿œ ±◊∏Æ±‚
-            Vector3 roomToCellCenter = _tileGenerator.Tilemap.CellToWorld(_tileGenerator.RoomCenter); // ¡¬«• º¬∆√
+            _tileGenerator.TileGenerate(_rooms[i], _chpaterMapInfoSO.ChpaterRuleTiles, i); //ÌÉÄÏùº Í∑∏Î¶¨Í∏∞
+            Vector3 roomToCellCenter = _tileGenerator.Tilemap.CellToWorld(_tileGenerator.RoomCenter); // Ï¢åÌëú ÏÖãÌåÖ
             _rooms[i].Center = roomToCellCenter;
 
-            RoomControl roomControl = await CreateRoom(roomToCellCenter); // Room ∞¥√º ª˝º∫
+            RoomControl roomControl = await CreateRoom(roomToCellCenter); // Room Í∞ùÏ≤¥ ÏÉùÏÑ±
             roomControl.Room = _rooms[i];
+            roomControl.CheckClearRoom();
             roomControl.TileMap = _tileGenerator.Tilemap;
             roomControl.Room.GetCreateAbleRegion = _tileGenerator.GetNonCollisionRegions;
             roomControl.Room.Seed = (Time.time + i).ToString();
@@ -77,26 +75,25 @@ public class MapGenerator : MonoBehaviour
 
             if (roomControl.Room.RoomType == eRoomType.Event)
                 await CreateSpecificObject(roomControl);
-            // ¿Âæ÷π∞ ª˝º∫
+            // Ïû•Ïï†Î¨º ÏÉùÏÑ±
             roomControl.Room.CreateAbleRegion = _tileGenerator.GetNonCollisionRegions(roomControl.Room.Map,0);
+            roomControl.Room.RemoveWallAroundArea();
             roomControl.Room.Props = await CreateProp(roomControl);
             roomControl.Room.Trabs = await CreateTrab(roomControl);
-            roomControl.CreateMonster = CreateMonster;
-            roomControl.CreateSpecificMonster = CreateSpecificMonster;
             roomControl.RoomReady(false);
             roomControls.Add(roomControl);
         }
         _roomManager.Rooms = roomControls;
-        _roomManager.StartRoom();
+        _roomManager.StartRoom(_chpaterMapInfoSO.SceneType).Forget();
     }
     
-    // ¿¸√º Map ∞≈∏Æ ∞ËªÍ
+    // Ï†ÑÏ≤¥ Map Í±∞Î¶¨ Í≥ÑÏÇ∞
     private void MapFloodFlowDistance(Vector2Int startRoomIndex)
     {
         int[,] mapFlags = new int[_map.GetLength(0), _map.GetLength(1)];
 
         Queue<TileGenerator.SpecificCoord> queue = new Queue<TileGenerator.SpecificCoord>();
-        queue.Enqueue(new TileGenerator.SpecificCoord(startRoomIndex.x, startRoomIndex.y, 1)); // Ω√¿€πÊ z ∞™∞˙ ∏¬√Áæﬂ «‘
+        queue.Enqueue(new TileGenerator.SpecificCoord(startRoomIndex.x, startRoomIndex.y, 1)); // ÏãúÏûëÎ∞© z Í∞íÍ≥º ÎßûÏ∂∞Ïïº Ìï®
         mapFlags[startRoomIndex.x, startRoomIndex.y] = 1;
 
         while (queue.Count > 0)
@@ -124,10 +121,10 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    // SpecialπÊ »Æ∑¸ø° µ˚∏• √— πÊ ∞πºˆ √ﬂ∞°
+    // SpecialÎ∞© ÌôïÎ•†Ïóê Îî∞Î•∏ Ï¥ù Î∞© Í∞ØÏàò Ï∂îÍ∞Ä
     private void CheckSpecialAddRoom()
     {
-        string seed = (GameManager.Instance.Chatper - 1 + Time.time).ToString();
+        string seed = (DataManager.Instance.GameData.Chatper - 1 + Time.time).ToString();
         System.Random chapterRadom = new System.Random(seed.GetHashCode());
         
         _specialRoomCheckList = new List<bool>(_chpaterMapInfoSO.SpecialRoomInfos.Count);
@@ -157,7 +154,7 @@ public class MapGenerator : MonoBehaviour
         _roomCount += addRoomCount;
     }
 
-    // Ω√¿€πÊ, ∫∏Ω∫ ¿‘¿ÂπÊ º≥¡§
+    // ÏãúÏûëÎ∞©, Î≥¥Ïä§ ÏûÖÏû•Î∞© ÏÑ§Ï†ï
     private Vector2Int EssentialRoomTypeSetting()
     {
         int maxDitance = 0;
@@ -197,14 +194,14 @@ public class MapGenerator : MonoBehaviour
         return boosRoomIndex;
     }
 
-    // Ω∫∆‰º»πÊ º≥¡§
+    // Ïä§ÌéòÏÖúÎ∞© ÏÑ§Ï†ï
     private void SpecialRoomSetting(Vector2Int startRoomIndex, Vector2Int bossRoomIndex)
     {
         for(int i=0; i < _chpaterMapInfoSO.SpecialRoomInfos.Count; i++)
         {
             var specialRoomInfo = _chpaterMapInfoSO.SpecialRoomInfos[i];
             Room specialRoom = null;
-            // ¿Ãπ¯ √©≈Õø° πÊ¿Ã ∆˜«‘µ«æÓ ¿÷¥¬¡ˆ ø©∫Œ
+            // Ïù¥Î≤à Ï±ïÌÑ∞Ïóê Î∞©Ïù¥ Ìè¨Ìï®ÎêòÏñ¥ ÏûàÎäîÏßÄ Ïó¨Î∂Ä
             if (_specialRoomCheckList[i])
             {
                 if(specialRoomInfo.CriteriaRoomType == eEventRoomType.Start)
@@ -226,7 +223,7 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    // ≥™∏”¡ˆ ¿Ã∫•∆ÆπÊ º≥¡§
+    // ÎÇòÎ®∏ÏßÄ Ïù¥Î≤§Ìä∏Î∞© ÏÑ§Ï†ï
     private List<int> EventRoomTypeSetting()
     {
         List<int> normalRoomsList = new List<int>();
@@ -237,8 +234,8 @@ public class MapGenerator : MonoBehaviour
                 normalRoomsList.Add(i);
             }
         }
-        //Ω√¿€πÊ, ∫∏Ω∫ ¿‘¿ÂπÊ 2∞≥∞° π´¡∂∞« ¿÷æÓæﬂ «—¥Ÿ.
-        List<int> selectNumberList = SelectRandomNumbers(normalRoomsList, _chpaterMapInfoSO.EventRooms.Count - 2);
+        //ÏãúÏûëÎ∞©, Î≥¥Ïä§ ÏûÖÏû•Î∞© 2Í∞úÍ∞Ä Î¨¥Ï°∞Í±¥ ÏûàÏñ¥Ïïº ÌïúÎã§.
+        List<int> selectNumberList = MathUtils.SelectRandomNumbers(normalRoomsList, _chpaterMapInfoSO.EventRooms.Count - 2);
         for (int j = 0,  eventIndex = 2; j < selectNumberList.Count; j++, eventIndex++)
         {
             int index = selectNumberList[j];
@@ -248,7 +245,7 @@ public class MapGenerator : MonoBehaviour
         return normalRoomsList;
     }
 
-    // ∏ÛΩ∫≈Õ πÊ º≥¡§
+    // Î™¨Ïä§ÌÑ∞ Î∞© ÏÑ§Ï†ï
     private void MonsterRoomSetting(List<int> normalRoomList)
     {
         List<int> monsterRoomsIndex = new List<int>();
@@ -260,7 +257,7 @@ public class MapGenerator : MonoBehaviour
             }
         }
 
-        var randomRoomsList = SelectRandomNumbers(monsterRoomsIndex, monsterRoomsIndex.Count);
+        var randomRoomsList = MathUtils.SelectRandomNumbers(monsterRoomsIndex, monsterRoomsIndex.Count);
         for(int i=0; i<normalRoomList.Count; i++)
         {
             var monsterRoom = _rooms[normalRoomList[i]];
@@ -276,25 +273,7 @@ public class MapGenerator : MonoBehaviour
         monsterRoomsIndex.Clear();
     }
 
-    // ∑£¥˝ Index ªÃ±‚
-    private List<int> SelectRandomNumbers(List<int> numbers, int count)
-    {
-        System.Random random = new System.Random();
-        List<int> selectedNumbers = new List<int>();
-
-        for (int i = 0; i < count; i++)
-        {
-            // numbers ∏ÆΩ∫∆Æø°º≠ ¿”¿«¿« ¿Œµ¶Ω∫∏¶ º±≈√
-            int randomIndex = random.Next(0, numbers.Count);
-
-            // º±≈√µ» º˝¿⁄∏¶ ∞·∞˙ ∏ÆΩ∫∆Æø° √ﬂ∞°«œ∞Ì numbers ∏ÆΩ∫∆Æø°º≠ ¡¶∞≈
-            selectedNumbers.Add(numbers[randomIndex]);
-            numbers.RemoveAt(randomIndex);
-        }
-        return selectedNumbers;
-    }
-
-    // ∆Øºˆ ¡ˆ¡° √£±‚ (»´ºˆ æÀ∞Ì∏Æ¡Ú ¿ÃøÎ)
+    // ÌäπÏàò ÏßÄÏ†ê Ï∞æÍ∏∞ (ÌôçÏàò ÏïåÍ≥†Î¶¨Ï¶ò Ïù¥Ïö©)
     private Room SelectFloodFlowRoom(Vector2Int startPos, int maxDistance)
     {
         int[,] mapFlags = new int[_map.GetLength(0), _map.GetLength(1)];
@@ -336,11 +315,11 @@ public class MapGenerator : MonoBehaviour
     }
 
     #region  Room
-    // Drunked Walk æÀ∞Ì∏Æ¡Ú πÊ ª˝º∫
+    // Drunked Walk ÏïåÍ≥†Î¶¨Ï¶ò Î∞© ÏÉùÏÑ±
     private Vector2Int GenerateRoom()
     {
         _roomCount += _chpaterMapInfoSO.RoomCount;
-        _currentPosition = new Vector2Int(0, 0); // Ω√¿€ ¡ˆ¡°¿∫ ±◊∏ÆµÂ ¡ﬂæ”
+        _currentPosition = new Vector2Int(0, 0); // ÏãúÏûë ÏßÄÏ†êÏùÄ Í∑∏Î¶¨Îìú Ï§ëÏïô
         _maxSteps = _roomCount * 10;
 
         List<Vector2Int> roomTiles = new List<Vector2Int>();
@@ -353,10 +332,10 @@ public class MapGenerator : MonoBehaviour
 
         while (roomTiles.Count < _roomCount)
         {
-            // π´¿€¿ß πÊ«‚ º±≈√ (ªÛ, «œ, ¡¬, øÏ)
+            // Î¨¥ÏûëÏúÑ Î∞©Ìñ• ÏÑ†ÌÉù (ÏÉÅ, Ìïò, Ï¢å, Ïö∞)
             int randomDirection = UnityEngine.Random.Range(0, 4);
 
-            // º±≈√µ» πÊ«‚¿∏∑Œ ¿Ãµø
+            // ÏÑ†ÌÉùÎêú Î∞©Ìñ•ÏúºÎ°ú Ïù¥Îèô
             switch (randomDirection)
             {
                 case 0:
@@ -378,7 +357,7 @@ public class MapGenerator : MonoBehaviour
                 roomTiles.Add(_currentPosition);
             }
 
-            // Map ≈©±‚ ±∏«œ±‚
+            // Map ÌÅ¨Í∏∞ Íµ¨ÌïòÍ∏∞
             if (xMin > _currentPosition.x)
             {
                 xMin = _currentPosition.x;
@@ -396,7 +375,7 @@ public class MapGenerator : MonoBehaviour
                 yMax = _currentPosition.y;
             }
         }
-        int xSzie = Math.Abs(xMin) + xMax + 1; // 0 ¿Ã µÈæÓ∞°±‚ ∂ßπÆ
+        int xSzie = Math.Abs(xMin) + xMax + 1; // 0 Ïù¥ Îì§Ïñ¥Í∞ÄÍ∏∞ ÎïåÎ¨∏
         int ySize = Math.Abs(yMin) + yMax + 1;
 
         Vector2Int startRoomIndex = new();
@@ -422,7 +401,7 @@ public class MapGenerator : MonoBehaviour
         return startRoomIndex;
     }
 
-    // πÊ ∞¥√º ª˝º∫
+    // Î∞© Í∞ùÏ≤¥ ÏÉùÏÑ±
     private async UniTask<RoomControl> CreateRoom(Vector3 roomCenter)
     {
         var room = await AddressableManager.Instance.InstanceObject<GameObject>(_chpaterMapInfoSO.ChapterRoom.name.ToString());
@@ -432,7 +411,7 @@ public class MapGenerator : MonoBehaviour
         return roomControl;
     }
 
-    // πÊ to πÊ ø¨∞·
+    // Î∞© to Î∞© Ïó∞Í≤∞
     private void ConnectRoom(RoomControl roomControl, int index)
     {
         int connectCount = 0;
@@ -513,7 +492,7 @@ public class MapGenerator : MonoBehaviour
 
             int posIndex = pseudoRandom.Next(0, roomControl.Room.CreateAbleRegion.Count);
             TileGenerator.Coord coord = roomControl.Room.GetCreatePos(posIndex);
-            trab.transform.position = _tileGenerator.Tilemap.CellToWorld(roomControl.Room.Map[coord.TileX, coord.TileY]);
+            trab.transform.position = _tileGenerator.Tilemap.GetCellCenterWorld(roomControl.Room.Map[coord.TileX, coord.TileY]);
             trabs.Add(trab);
         }
         return trabs;
@@ -532,7 +511,7 @@ public class MapGenerator : MonoBehaviour
 
             int posIndex = pseudoRandom.Next(0, roomControl.Room.CreateAbleRegion.Count);
             TileGenerator.Coord coord = roomControl.Room.GetCreatePos(posIndex);
-            prop.transform.position = _tileGenerator.Tilemap.CellToWorld(roomControl.Room.Map[coord.TileX, coord.TileY]);
+            prop.transform.position = _tileGenerator.Tilemap.GetCellCenterWorld(roomControl.Room.Map[coord.TileX, coord.TileY]);
             props.Add(prop);
         }
         return props;
@@ -549,51 +528,6 @@ public class MapGenerator : MonoBehaviour
             propObjects.Add(prop);
         }
         return propObjects;
-    }
-
-    private async UniTask<List<GameObject>> CreateMonster(RoomControl roomControl)
-    {
-        if (roomControl.Room.monsterRoomType == eMonsterRoomType.None) 
-            return null;
-
-        System.Random pseudoRandom = new System.Random(roomControl.Room.Seed.GetHashCode());
-        int monsterCreateCount = pseudoRandom.Next(_chpaterMapInfoSO.ChapterRoomInfo.MonsterCostMin, _chpaterMapInfoSO.ChapterRoomInfo.MonsterCostMax + 1);
-
-        List<GameObject> monsters = new List<GameObject>(monsterCreateCount);
-        List<GameObject> roomMonstersInfo = _chpaterMapInfoSO.GetMonsters(roomControl.Room.monsterRoomType);
-        for(int i = 0; i < monsterCreateCount; i++)
-        {
-            int monsterIndex = pseudoRandom.Next(0, roomMonstersInfo.Count);
-            var monster = await AddressableManager.Instance.InstanceObject<GameObject>(roomMonstersInfo[monsterIndex].name.ToString(), roomControl.transform);
-
-            int posIndex = pseudoRandom.Next(0, roomControl.Room.CreateAbleRegion.Count);
-            TileGenerator.Coord coord = roomControl.Room.GetCreatePos(posIndex);
-            monster.transform.position = _tileGenerator.Tilemap.CellToWorld(_tileGenerator.Map[coord.TileX, coord.TileY]);
-            monsters.Add(monster);
-        }
-        return monsters;
-    }
-
-    private async UniTask<List<GameObject>> CreateSpecificMonster(RoomControl roomControl)
-    {
-        System.Random pseudoRandom = new System.Random(roomControl.Room.Seed.GetHashCode());
-
-        var specialRoomInfo = _chpaterMapInfoSO.SpecialRoomInfos.FirstOrDefault(r => r.SpecialRoomType == roomControl.Room.SpecialRoomType);
-        List<GameObject> monsters = new List<GameObject>();
-
-        for (int i = 0; i < specialRoomInfo.SpecialMonsters.Count; i++)
-        {
-            for(int j=0; j< specialRoomInfo.SpecialMonsters[i].Count; j++)
-            {
-                var monster = await AddressableManager.Instance.InstanceObject<GameObject>(specialRoomInfo.SpecialMonsters[j].Monster.name.ToString(), roomControl.transform);
-
-                int posIndex = pseudoRandom.Next(0, roomControl.Room.CreateAbleRegion.Count);
-                TileGenerator.Coord coord = roomControl.Room.GetCreatePos(posIndex);
-                monster.transform.position = _tileGenerator.Tilemap.CellToWorld(_tileGenerator.Map[coord.TileX, coord.TileY]);
-                monsters.Add(monster);
-            }
-        }
-        return monsters;
     }
     #endregion
 
@@ -682,6 +616,26 @@ public class Room
                     neighbourCoord.TileX = x;
                     neighbourCoord.TileY = y;
                     CreateAbleRegion.Remove(neighbourCoord);
+                }
+            }
+        }
+    }
+
+    public void RemoveWallAroundArea()
+    {
+        for(int i=0; i<SpecifcCoords.Count; i++)
+        {
+            var wallCoord = SpecifcCoords[i];
+
+            for (int x = wallCoord.TileX - 1; x <= wallCoord.TileX+1; x++)
+            {
+                for (int y = wallCoord.TileY - 1; y <= wallCoord.TileY+1; y++)
+                {
+                    if (x >= 0 && y >= 0)
+                    {
+                        TileGenerator.Coord neighbourCoord = new TileGenerator.Coord(x, y);
+                        CreateAbleRegion.Remove(neighbourCoord);
+                    }
                 }
             }
         }
