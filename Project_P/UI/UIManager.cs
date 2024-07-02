@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +19,7 @@ public class UIManager : Singleton<UIManager>
         await UniTask.WaitUntil(() => GameManager.Instance.IsSceneStart == true);
         GameObject uiObject = await AddressableManager.Instance.InstanceObject<GameObject>(uiType.ToString(), UIReposotory);
         Debug.Log($"[UI] {uiType} Open");
+
         T ui = uiObject.GetComponent<T>();
         ui.Initialize();
         Push(ui);
@@ -50,9 +52,10 @@ public class UIManager : Singleton<UIManager>
         {
             var window = Pop() as UIBase;
             var windowType = window.GetUIType();
-            Debug.Log($"[UI] {windowType} Close");
             window?.Destroy();
-            if(windowType == uiType)
+
+            Debug.Log($"[UI] {windowType} Close");
+            if (windowType == uiType)
             {
                 break;
             }
@@ -137,7 +140,7 @@ public class UIManager : Singleton<UIManager>
     #region input - UI Open
     public void OpenOption(InputAction.CallbackContext context)
     {
-        Open<OptionView>(eUIType.Option);
+        Open<OptionPresenter>(eUIType.Option);
     }
 
     public void OpenBook(InputAction.CallbackContext context)
@@ -182,20 +185,16 @@ public interface IWindow
     void Close();
     void Show();
     void Hide();
-    void Back();
     void Destroy();
     void SetParent(Transform parent);
-    void InputActive(bool isActive);
     eUIType GetUIType();
 }
 
-public interface IPresenter
+public interface IEventView
 {
+    void RegisterEvent();
+    void UnregisterEvent();
 
-}
-
-public interface IView
-{
     void ReceiveMsg(IMessage msg);
 }
 
