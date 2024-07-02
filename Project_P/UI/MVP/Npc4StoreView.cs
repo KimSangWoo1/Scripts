@@ -4,55 +4,47 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization.Components;
 
-public class Npc4StoreView : UIBase, IView
+public class Npc4StoreView : MonoBehaviour, IEventView
 {
-    [Header("UI")]
-    [SerializeField]
-    private Image _abilityIcon;
-    [SerializeField]
-    private LocalizeStringEvent _localAbilityName;
-    [SerializeField]
-    private LocalizeStringEvent _localAbilityDescript;
+    [Header("UI-Ability")]
+    [SerializeField] Image _abilityIcon;
+    [SerializeField] LocalizeStringEvent _localAbilityName;
+    [SerializeField] LocalizeStringEvent _localAbilityDescript;
 
     [Header("Ani")]
-    [SerializeField]
-    private GameObject _buyAnimation;
-    [SerializeField]
-    RefuseBuy refuseBuy;
+    [SerializeField] GameObject _buyAnimation;
+    [SerializeField] RefuseBuy refuseBuy;
 
-    [Header("Audio")]
-    [SerializeField]
-    private UIAudioSO _uiAudioSO;
+    [Header("Audio SO")]
+    [SerializeField] UIAudioSO _uiAudioSO;
 
     //Event
-    public event Action<InputAction.CallbackContext> Buy;  // 0
-    public event Action<InputAction.CallbackContext> Exit;  // 1
-
     public Action<IMessage> Msg;
 
-    private void Awake()
+    public Action<InputAction.CallbackContext> OnBuy;
+    public Action<InputAction.CallbackContext> OnClose;
+
+    #region Store
+    private void OpenView()
     {
-        Msg += ReceiveMsg;
+        AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Open, 0));
     }
 
-    public override void InputActive(bool isActive)
+    private void CloseView()
     {
-        if (isActive)
-        {
-            EventManager.Instance.Notify(EventType.AddKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Confirm.ToString(), Buy));
-            EventManager.Instance.Notify(EventType.AddKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Exit.ToString(), Exit));
-        }
-        else
-        {
-            EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Confirm.ToString(), Buy));
-            EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Exit.ToString(), Exit));
-        }
+        AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Close, 0));
     }
 
-    public override void Close()
+    private void BuyFailed()
     {
-        base.Close();
-        InputActive(false);
+        AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Event, 0));
+        refuseBuy.OnRefuse();
+    }
+
+    private void BuyAbility()
+    {
+        AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Click, 0));
+        BuyAnimationOnOff(true);
     }
 
     private void ShowAbility(NpcAbilityProduct npcAbilityProduct)
@@ -64,72 +56,58 @@ public class Npc4StoreView : UIBase, IView
         _localAbilityName.RefreshString();
         _localAbilityDescript.RefreshString();
     }
+    #endregion
 
-    private void BuyAnimationOnOff(bool on)
+    #region Inherit Event
+    public void RegisterEvent()
     {
-        _buyAnimation.SetActive(on);
+        Msg += ReceiveMsg;
+    }
+
+    public void UnregisterEvent()
+    {
+        Msg -= ReceiveMsg;
     }
 
     public void ReceiveMsg(IMessage msg)
     {
         var newMsg = (Npc4StoreMsg)msg;
-        switch (newMsg.ActionNumber)
+        switch (newMsg.uiEventType)
         {
-            // Init Msg
-            case -1:
-                InputActive(true);
-                AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Open, 0));
-                ShowAbility(newMsg.NpcAbilityAddtiveProduct);
+            case eUIEventType.Open:
+                OpenView();
+                ShowAbility(newMsg.npcAbilityAddtiveProduct);
                 break;
-            // Event Msg
-            case 0:
-                AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Click, 0));
-                EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Confirm.ToString(), Buy));
-                EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Exit.ToString(), Exit));
-
-                BuyAnimationOnOff(true);
+            case eUIEventType.Click:
+                BuyAbility();
                 break;
-            case 1:
-                AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Close, 0));
-                Close();
+            case eUIEventType.Close:
+                CloseView();
                 break;
-            //µ∑ ∫Œ¡∑
-            case 10:
-                AudioManager.Instance.PlaySFX(_uiAudioSO.GetAudioName(eUIAudioType.Event, 0));
-                refuseBuy.OnRefuse();
+            //Îèà Î∂ÄÏ°±
+            case eUIEventType.Failed:
+                BuyFailed();
                 break;
         }
     }
+    #endregion
 
     #region Animation Event
-    public void AddNpcAbility()
+    public void BuyAnimationOnOff(bool on)
     {
-        // æÓ∫Ù∏Æ∆º ID∑Œ √ﬂ∞°
-        var enumerator = DataManager.Instance.NpcAbilityDataDic.Values.GetEnumerator();
-        while (enumerator.MoveNext())
-        {
-            var npcAbility = enumerator.Current as NpcAbility;
-            if (npcAbility.NPCType == eNPCType.NPC4)
-            {
-                npcAbility.LevelUp();
-                EventManager.Instance.Notify(EventType.AddAbility, new EventData.AddAbilityData(npcAbility.GetId(), true));
-                break;
-            }
-        }
-        BuyAnimationOnOff(false);
-        Close();
+        _buyAnimation.SetActive(on);
     }
     #endregion
 
     #region Message
     public struct Npc4StoreMsg : IMessage
     {
-        public int ActionNumber;
-        public NpcAbilityAddtiveProduct NpcAbilityAddtiveProduct;
-        public Npc4StoreMsg(int actionNumber, NpcAbilityAddtiveProduct npcAbilityAddtiveProduct = null) : this()
+        public eUIEventType uiEventType;
+        public NpcAbilityAddtiveProduct npcAbilityAddtiveProduct;
+        public Npc4StoreMsg(eUIEventType uiEventType, NpcAbilityAddtiveProduct npcAbilityAddtiveProduct = null) : this()
         {
-            ActionNumber = actionNumber;
-            NpcAbilityAddtiveProduct = npcAbilityAddtiveProduct;
+            this.uiEventType = uiEventType;
+            this.npcAbilityAddtiveProduct = npcAbilityAddtiveProduct;
         }
     }
     #endregion
