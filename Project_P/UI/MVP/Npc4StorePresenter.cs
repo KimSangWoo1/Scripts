@@ -3,53 +3,123 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Npc4StorePresenter : MonoBehaviour
+public class Npc4StorePresenter : NpcStorePresenterBase
 {
     [SerializeField]
     NpcAbilityAddtiveProductSO _npcAbilityProductSO;
     Npc4StoreView _npcStoreView;
 
+    #region Mono
     private void Awake()
     {
         _npcStoreView = GetComponent<Npc4StoreView>();
-
-        EventInit();
     }
 
     private void OnEnable()
     {
-        _npcStoreView.Msg?.Invoke(new Npc4StoreView.Npc4StoreMsg(-1, _npcAbilityProductSO._npcAbilityAddtiveProduct));
+        _npcStoreView.OnBuy += HandleBuy;
+        _npcStoreView.OnClose += HandleClose;
+
+        _npcStoreView.RegisterEvent();
+        RegisterInput();
     }
 
-    private void EventInit()
+    private void OnDisable()
     {
-        _npcStoreView.Buy += OnBuy;
-        _npcStoreView.Exit += OnExit;
+        _npcStoreView.OnBuy -= HandleBuy;
+        _npcStoreView.OnClose -= HandleClose;
+
+        _npcStoreView.UnregisterEvent();
+        UnRegisterInput();
+    }
+    #endregion
+
+    #region UIBase Override Method
+    public override void Open()
+    {
+        base.Open();
+        _npcStoreView.Msg?.Invoke(new Npc4StoreView.Npc4StoreMsg(eUIEventType.Open, _npcAbilityProductSO._npcAbilityAddtiveProduct));
     }
 
-    private void OnBuy(InputAction.CallbackContext callbackContext)
+    public override void Close()
+    {
+        base.Close();
+        _npcStoreView.Msg?.Invoke(new Npc4StoreView.Npc4StoreMsg(eUIEventType.Close));
+    }
+
+    public override void Show()
+    {
+        base.Show();
+        RegisterInput();
+    }
+
+    public override void Hide()
+    {
+        base.Hide();
+        UnRegisterInput();
+    }
+
+    public override void RegisterInput()
+    {
+        base.RegisterInput();
+        EventManager.Instance.Notify(EventType.AddKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Confirm.ToString(), HandleBuy));
+        EventManager.Instance.Notify(EventType.AddKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Exit.ToString(), HandleClose));
+    }
+
+    public override void UnRegisterInput()
+    {
+        base.UnRegisterInput();
+        EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Confirm.ToString(), HandleBuy));
+        EventManager.Instance?.Notify(EventType.RemoveKeyDown, new EventData.InputKeyData(eActionMapType.UI, eUIKeyType.Exit.ToString(), HandleClose));
+    }
+    #endregion
+
+    #region  NpcStorePresenterBase Override Method
+    protected override void HandleBuy(InputAction.CallbackContext callbackContext)
     {
         float maxHpDecreasePercentage = 0.01f * _npcAbilityProductSO._npcAbilityAddtiveProduct.AbValue;
-        //√÷¥Î √º∑¬ ∫Ò±≥
+        //ÏµúÎåÄ Ï≤¥Î†• ÎπÑÍµê
         if (ModelManager.PlayerModel.Stats.Hp > ModelManager.PlayerModel.Stats.MaxHp * maxHpDecreasePercentage)
         {
             DataManager.Instance.GameUtilsData.Npc4StoreTicket--;
-            ModelManager.PlayerModel.Stats.MaxHp -= (int)(ModelManager.PlayerModel.Stats.MaxHp * maxHpDecreasePercentage); // MaxHp∏¶ ∞®º“
+            ModelManager.PlayerModel.Stats.MaxHp -= (int)(ModelManager.PlayerModel.Stats.MaxHp * maxHpDecreasePercentage); // MaxHpÎ•º Í∞êÏÜå
             float hp = ModelManager.PlayerModel.Stats.Hp;
-            hp *= (1.0f - maxHpDecreasePercentage); // «ˆ¿Á √º∑¬¿ª ∫Ò¿≤¿ª ∞ˆ«œø© ∫Ø∞Ê
+            hp *= (1.0f - maxHpDecreasePercentage); // ÌòÑÏû¨ Ï≤¥Î†•ÏùÑ ÎπÑÏú®ÏùÑ Í≥±ÌïòÏó¨ Î≥ÄÍ≤Ω
             ModelManager.PlayerModel.Stats.Hp = (int)hp;
 
-            _npcStoreView.Msg.Invoke(new Npc4StoreView.Npc4StoreMsg(0));
+            _npcStoreView.Msg.Invoke(new Npc4StoreView.Npc4StoreMsg(eUIEventType.Click));
+            UnRegisterInput();
         }
         else
         {
-            //±∏∏≈ ∫“∞°
-            _npcStoreView.Msg.Invoke(new Npc4StoreView.Npc4StoreMsg(10));
+            //Íµ¨Îß§ Î∂àÍ∞Ä
+            _npcStoreView.Msg.Invoke(new Npc4StoreView.Npc4StoreMsg(eUIEventType.Failed));
         }
     }
 
-    private void OnExit(InputAction.CallbackContext callbackContext)
+    protected override void HandleClose(InputAction.CallbackContext callbackContext)
     {
-        _npcStoreView.Msg?.Invoke(new Npc4StoreView.Npc4StoreMsg(1));
+        _npcStoreView.Msg?.Invoke(new Npc4StoreView.Npc4StoreMsg(eUIEventType.Close));
+        Close();
     }
+    #endregion
+
+    #region Animation Event
+    public void AddNpcAbility()
+    {
+        // Ïñ¥ÎπåÎ¶¨Ìã∞ IDÎ°ú Ï∂îÍ∞Ä
+        var enumerator = DataManager.Instance.NpcAbilityDataDic.Values.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            var npcAbility = enumerator.Current as NpcAbility;
+            if (npcAbility.NPCType == eNPCType.NPC4)
+            {
+                npcAbility.LevelUp();
+                EventManager.Instance.Notify(EventType.AddAbility, new EventData.AddAbilityData(npcAbility.GetId(), true));
+                break;
+            }
+        }
+        Close();
+    }
+    #endregion
 }
