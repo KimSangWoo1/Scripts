@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,25 @@ using UnityEngine.SceneManagement;
 public class UIManager : Singleton<UIManager>
 {
     private Stack<IWindow> _uiStack = new Stack<IWindow>();
+    public int StackCount => _uiStack.Count;
 
     private Transform _uiRepository;
     public Transform UIReposotory { get => _uiRepository ?? FindObjectOfType<UIRepository>().transform; set => _uiRepository = value; }
 
+    private const string FloatDamage = "FloatingDamage";
     #region Open Close
     public async void Open<T>(eUIType uiType) where T : IWindow
+    {
+        await UniTask.WaitUntil(() => GameManager.Instance.IsSceneStart == true);
+        GameObject uiObject = await AddressableManager.Instance.InstanceObject<GameObject>(uiType.ToString(), UIReposotory);
+        Debug.Log($"[UI] {uiType} Open");
+
+        T ui = uiObject.GetComponent<T>();
+        ui.Initialize();
+        Push(ui);
+    }
+
+    public async UniTask AsyncOpen<T>(eUIType uiType) where T : IWindow
     {
         await UniTask.WaitUntil(() => GameManager.Instance.IsSceneStart == true);
         GameObject uiObject = await AddressableManager.Instance.InstanceObject<GameObject>(uiType.ToString(), UIReposotory);
@@ -46,11 +60,23 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    public void Close<T>(eUIType uiType) where T : IWindow
+    public async void NoticeOpen(eUIType uiType, eNoticeType noticeType) 
+    {
+        await UniTask.WaitUntil(() => GameManager.Instance.IsSceneStart == true);
+        GameObject uiObject = await AddressableManager.Instance.InstanceObject<GameObject>(uiType.ToString(), UIReposotory);
+        Debug.Log($"[Notice] {uiType} Open");
+
+        NoticeMessagePresenter noticeMessage = uiObject.GetComponent<NoticeMessagePresenter>();
+        noticeMessage.Initialize();
+        noticeMessage.Open();
+        noticeMessage.SetMessage(noticeType);
+    }
+
+    public void Close<T>(eUIType uiType, bool isInputChange = true) where T : IWindow
     {
         while (_uiStack.Count>0)
         {
-            var window = Pop() as UIBase;
+            var window = Pop(isInputChange) as UIBase;
             var windowType = window.GetUIType();
             window?.Destroy();
 
@@ -77,6 +103,19 @@ public class UIManager : Singleton<UIManager>
                 _uiStack.Pop().Destroy();
             }
         }
+    }
+
+    public void ShowDamage(Vector3 position, int damage)
+    {
+        PoolParams damageParams;
+        damageParams.Tag = FloatDamage;
+        damageParams.Owner = gameObject;
+        damageParams.Position = position;
+        damageParams.Rotation = Quaternion.identity;
+        damageParams.Parent = null;
+
+        var floatingDamage = ObjectPoolManager.Instance.GetFromPool(damageParams) as FloatingDamage;
+        floatingDamage.SetDamage(damage);
     }
 
     public void Hide<T>(eUIType uiType) where T : IWindow
@@ -117,7 +156,7 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    private IWindow Pop()
+    private IWindow Pop(bool isInputChange)
     {
         IWindow window = null;
         if (_uiStack.Count > 0)
@@ -127,7 +166,11 @@ public class UIManager : Singleton<UIManager>
 
         if (_uiStack.Count == 0)
         {
-            EventManager.Instance.Notify(EventType.InputChanged, new EventData.InputChageData(eActionMapType.Player));
+            if (isInputChange)
+            {
+                EventManager.Instance.Notify(EventType.InputChanged, new EventData.InputChageData(eActionMapType.Player));
+                InteractionCheck();
+            }
         }
         else
         {
@@ -140,12 +183,13 @@ public class UIManager : Singleton<UIManager>
     #region input - UI Open
     public void OpenOption(InputAction.CallbackContext context)
     {
-        Open<OptionPresenter>(eUIType.Option);
+        AudioManager.Instance.PausePlaySFX();
+        SafeOpen<OptionPresenter>(eUIType.Option);
     }
 
     public void OpenBook(InputAction.CallbackContext context)
     {
-        Open<BookView>(eUIType.Book);
+        Open<BookPresenter>(eUIType.Book);
     }
     #endregion
 
@@ -162,20 +206,14 @@ public class UIManager : Singleton<UIManager>
         _uiStack.Clear();
     }
 
-    #region 임시 
-    public GameObject GetPeek()
+    // Player가 Interaction안에 들어와있는지 체크 (현재 한 곳에서 Input 기능 건드는게 아니라서 임시로 여기서 더블 체크)
+    private void InteractionCheck()
     {
-        if (_uiStack.Count > 0)
+        if (GameManager.Instance.IsInPlayerInteraction)
         {
-            var ui = (UIBase)_uiStack.Peek();
-            return ui.gameObject;
-        }
-        else
-        {
-            return null;
+            EventManager.Instance.Notify(EventType.InputEnable, new EventData.InputEnableData(eActionMapType.Player, KeyType.Attack.ToString(), false));
         }
     }
-    #endregion
 }
 
 public interface IWindow
@@ -190,15 +228,28 @@ public interface IWindow
     eUIType GetUIType();
 }
 
-public interface IEventView
+public interface IEventRegister
 {
     void RegisterEvent();
     void UnregisterEvent();
+}
 
+public interface IMessageReceiver
+{
     void ReceiveMsg(IMessage msg);
 }
 
 public interface IMessage
 {
 
+}
+
+public struct UIMsg : IMessage
+{
+    public eUIEventType uiEventType;
+
+    public UIMsg(eUIEventType uiEventType) : this()
+    {
+        this.uiEventType = uiEventType;
+    }
 }
