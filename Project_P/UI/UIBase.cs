@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class UIBase : MonoBehaviour, IWindow
 {
@@ -9,11 +10,10 @@ public class UIBase : MonoBehaviour, IWindow
 
     public eUIType GetUIType() => _uiType;
 
-    public virtual void Initialize() {}
+    #region UI - Essential Method
+    public virtual void Initialize() { }
 
-    public virtual void Open()
-    {
-    }
+    public virtual void Open() { }
 
     public virtual void Close() 
     {
@@ -33,7 +33,9 @@ public class UIBase : MonoBehaviour, IWindow
     }
 
     public virtual void Back() { }
+    #endregion
 
+    #region UI - Utils
     public virtual void Destroy() 
     {
         Destroy(this.gameObject);
@@ -43,7 +45,9 @@ public class UIBase : MonoBehaviour, IWindow
     {
         this.transform.parent = parent;
     }
+    #endregion
 
+    #region Event Register
     public virtual void RegisterInput()
     {
 
@@ -53,4 +57,12 @@ public class UIBase : MonoBehaviour, IWindow
     {
 
     }
+    #endregion
+
+    #region Handler
+    protected virtual void HandleClose(InputAction.CallbackContext callbackContext)
+    {
+
+    }
+    #endregion
 }
